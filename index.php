@@ -11,7 +11,7 @@
         try {
             $user = "ansible";
             $pass = "ansible";
-            $dbh = new PDO('mysql:host=localhost:8899;dbname=ansible', $user, $pass);
+            $dbh = new PDO('mysql:host=localhost:3306;dbname=ansible', $user, $pass);
             foreach($dbh->query('SELECT * from hosts') as $row) {
                var_dump($row);
             }
